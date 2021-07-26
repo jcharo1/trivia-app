@@ -47,6 +47,8 @@ psql trivia < trivia.psql
 
 ## Running the server
 
+From within the models.py file please ensure you set the enviroment varible database_path = postgres://localhost:5432/trivia
+
 From within the `backend` directory first ensure you are working using your created virtual environment.
 
 To run the server, execute:
@@ -79,6 +81,7 @@ python test_flaskr.py
 ### Getting Started 
 Base URL: Currently this application is only hosted locally. The backend is hosted at http://127.0.0.1:5000/
 Authentication: This version does not require authentication or API keys.
+
 
 ### Error Handling
 
