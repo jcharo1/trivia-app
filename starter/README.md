@@ -264,7 +264,7 @@ This endpoint either creates a new question or returns search results.
             "difficulty": 3,
             "category": "3"
         }'`<br>
-'''
+```
         {
             "created": 173, 
             "question_created": "Which US state contains an area known as the Upper Penninsula?", 
@@ -343,7 +343,7 @@ This endpoint either creates a new question or returns search results.
             "success": true, 
             "total_questions": 20
         }
-
+```
 
 2. If search term <strong>is</strong> included in request:
 
@@ -351,7 +351,7 @@ This endpoint either creates a new question or returns search results.
   * Searches for questions using search term in JSON request parameters.
   * Returns JSON object with paginated matching questions.
   * Example : `curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"searchTerm": "which"}'`<br>
-'''
+```
         {
             "questions": [
                 {
@@ -414,7 +414,7 @@ This endpoint either creates a new question or returns search results.
             "success": true, 
             "total_questions": 18
         }
-'''
+```
 #### POST /quizzes
 
 * General:
@@ -422,7 +422,7 @@ This endpoint either creates a new question or returns search results.
   * Uses JSON request parameters of category and previous questions.
   * Returns JSON object with random question not among previous questions.
   * Example : `curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [20, 21],"quiz_category": {"type": "Science", "id": "1"}}'`<br>
-'''
+```
         {
             "question": {
                 "answer": "Blood", 
@@ -433,4 +433,4 @@ This endpoint either creates a new question or returns search results.
             }, 
             "success": true
         }
-'''
+```
