@@ -105,8 +105,8 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
                 'deleted': id,
-                'questions': current_questions,
-                'total_questions': len(Question.query.all())
+                # 'questions': current_questions,
+                # 'total_questions': len(Question.query.all())
             })
             # abort if there's a problem deleting the question
         except BaseException:
@@ -229,41 +229,6 @@ def create_app(test_config=None):
             })
         except:
             abort(422)
-        #     questions = Question.query.filter_by(category=category['id']).all()
-        
-        # # gets total number of questions
-        # total = len(questions)
-
-        # # randomly picks a question
-        # def get_random_question():
-        #     return questions[random.randrange(0, len(questions), 1)]
-
-        # # checks to see if question has been used 
-        # def check_if_used(question):
-        #     used = False
-        #     for q in previous:
-        #         if (q == question.id):
-        #             used = True
-        #     return used
-
-        # # get random question
-        # question = get_random_question()
-
-        # # check if used, execute until unused question found
-        # while (check_if_used(question)):
-        #     question = get_random_question()
-
-        #     # if all questions tried, return without question 
-        #     # necessary if category has more then 5 questions
-        #     if (len(previous) == total):
-        #         return jsonify({
-        #             'success': True
-        #         })
-        # # return question 
-        # return jsonify({
-        #     'success': True,
-        #     'question': question.format()
-        # })
 
     # error handlers 
     @app.errorhandler(404)
