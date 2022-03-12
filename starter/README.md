@@ -43,6 +43,7 @@ With Postgres running, restore a database using the trivia.psql file provided. F
 
 ```bash
 psql trivia < trivia.psql
+
 ```
 
 ## Running the server
@@ -437,3 +438,4 @@ This endpoint either creates a new question or returns search results.
             "success": true
         }
 ```
+
