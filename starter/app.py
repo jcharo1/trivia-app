@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import random
 import json
-from models import setup_db, Question, Category
+from models import setup_db, Question, Category, db
 
 #test 
 QUESTIONS_PER_PAGE = 10
@@ -105,8 +105,6 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
                 'deleted': id,
-                # 'questions': current_questions,
-                # 'total_questions': len(Question.query.all())
             })
             # abort if there's a problem deleting the question
         except BaseException:
@@ -255,5 +253,4 @@ def create_app(test_config=None):
             "message": "bad request"
         }), 400
     return app
-    # if __name__ == '__main__':
-    #   app.run()
+
