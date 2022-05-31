@@ -10,4 +10,4 @@ DEBUG = True
 
 
 password = os.getenv('PASS')
-SQLALCHEMY_DATABASE_URI = f'postgresql://postgres:{password}@charo.gg:5432/fyyurrapp'
+database_path = f'postgresql://postgres:{password}@44.199.91.37:5432/trivia_db'

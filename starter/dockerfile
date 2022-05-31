@@ -1,8 +1,8 @@
 FROM python:stretch
 
-# ARG PASS
-# ENV PASS=${PASS}
-RUN ls -la
+ARG PASS
+ENV PASS=${PASS}
+
 COPY . /app
 WORKDIR /app
 
@@ -10,5 +10,5 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 
-ENTRYPOINT ["gunicorn", "-b", ":8080", "app:app"]
-# ENTRYPOINT ["flask","run"]
+ENTRYPOINT ["gunicorn", "-b", ":5000", "app:app"]
+# ENTRYPOINT ["python", "test.py"]
