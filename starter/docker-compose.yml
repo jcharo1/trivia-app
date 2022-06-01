@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: jcharo/trivia-api
+    restart: always
+    environment:
+      PASS: ${PASS}
+  client:
+    build:
+      context: frontend
+      dockerfile: dockerfile
+    image: jcharo/frontend-trivia
+    ports:
+      - "3000:3000"
