@@ -24,7 +24,7 @@ WORKDIR /app
 ENV PORT 80
 COPY . ./
 RUN npm install
-RUN npm run start
+RUN npm start
 
 
 
