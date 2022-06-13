@@ -10,5 +10,5 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 
-ENTRYPOINT ["gunicorn", "-b", ":5000", "app:app"]
+ENTRYPOINT ["gunicorn", "-b", ":80", "app:app"]
 # ENTRYPOINT ["python", "test.py"]

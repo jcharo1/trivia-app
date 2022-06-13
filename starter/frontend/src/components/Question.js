@@ -21,8 +21,9 @@ class Question extends Component {
         <div className="Question-status">
           <img className="category" src={`${category.toLowerCase()}.svg`}/>
           <div className="difficulty">Difficulty: {difficulty}</div>
-          <img src="delete.png" className="delete" onClick={() => this.props.questionAction('DELETE')}/>
-          
+          {/* <img src="delete.png" className="delete" onClick={() => this.props.questionAction('DELETE')}/> */}
+          {/* <i className="delete" onClick={() => this.props.questionAction('DELETE')}/> */}
+          <i className="fa fa-trash-o"  onClick={() => this.props.questionAction('DELETE')}></i>
         </div>
         <div className="show-answer button"
             onClick={() => this.flipVisibility()}>
