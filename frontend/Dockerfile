@@ -22,8 +22,8 @@
 FROM node:13.12.0-alpine as react-build
 WORKDIR /app
 COPY . ./
-RUN yarn
-RUN yarn build
+RUN npm install
+RUN npm build
 
 
 
