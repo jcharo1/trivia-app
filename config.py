@@ -10,4 +10,4 @@ DEBUG = True
 
 
 password = os.getenv('PASS')
-database_path = f'postgresql://postgres:pr0t0TypingTheW0rld!@charo.gg/trivia_db'
+database_path = f'postgresql://postgres:{password}@charo.gg/trivia_db'
