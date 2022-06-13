@@ -23,7 +23,7 @@ FROM node:13.12.0-alpine as react-build
 WORKDIR /app
 COPY . ./
 RUN npm install
-RUN npm build
+RUN npm run build
 
 
 
